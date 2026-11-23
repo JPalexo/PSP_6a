@@ -27,25 +27,23 @@ public class A6Test {
 
     @Test
     void test1() {
-        assertEquals(0.55338, new SearchX().buscarX(0.20, 6), 0.0001);
+        assertEquals(0.55338, new SearchX().buscarX(0.20, 6), 0.00001);
     }
 
     @Test
     void test2() {
-        assertEquals(1.75305, new SearchX().buscarX(0.45, 15), 0.0001);
+        assertEquals(1.75305, new SearchX().buscarX(0.45, 15), 0.00001);
     }
 
-    // con el error de 0.00001 del PDF este caso da 4.60156: en x = 4.6 la
-    // curva ya casi no sube y un error chico en p deja un error grande en x
     @Test
     void test3() {
-        assertEquals(4.60409, new SearchX().buscarX(0.495, 4), 0.01);
+        assertEquals(4.60409, new SearchX().buscarX(0.495, 4), 0.00001);
     }
 
     // con p chico la busqueda pasa por x = 0 (1.0, 0.5, 0.0, 0.25, ...)
     @Test
     void buscarXPasaPorCero() {
-        assertEquals(0.02613, new SearchX().buscarX(0.01, 6), 0.0001);
+        assertEquals(0.02613, new SearchX().buscarX(0.01, 6), 0.00001);
     }
 
     // Tabla 1 del 5a (integrar)

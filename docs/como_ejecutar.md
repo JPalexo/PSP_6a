@@ -1,6 +1,6 @@
-# Program 6 - como ejecutarlo
+# Program 6 - EJECUCION
 
-Siempre parado en la carpeta `PSP\Program6`.
+En la ruta `PSP\Program6`.
 
 ## Compilar
 
@@ -14,10 +14,10 @@ mvn -q clean compile
 java -cp target/classes App 2
 ```
 
-Sale:
+Resultado:
 
 ```
-Test 2  p=0.450  dof=15  x=1.75305
+Test 2  p=0.450  dof=15  x=1.753050
 ```
 
 Sin numero corre las tres: `java -cp target/classes App`.
@@ -40,8 +40,8 @@ es una prueba que provoca el error a proposito para probar el `catch` de `Output
 mvn verify
 ```
 
-Debe decir `All coverage checks have been met` y `BUILD SUCCESS`.
-El reporte queda en `target/site/jacoco/index.html`.
+Resultado esperado: `All coverage checks have been met` y `BUILD SUCCESS`.
+El reporte se guarda en: `target/site/jacoco/index.html`.
 
 ## Clases
 
@@ -58,12 +58,9 @@ El reporte queda en `target/site/jacoco/index.html`.
 
 | Test | p | dof | x esperado | x del programa |
 |---|---|---|---|---|
-| 1 | 0.20 | 6 | 0.55338 | 0.55341 |
-| 2 | 0.45 | 15 | 1.75305 | 1.75305 |
-| 3 | 0.495 | 4 | 4.60409 | 4.60156 |
-
-El test 3 no da igual porque ahi la curva ya casi no sube: con el error de 0.00001
-del PDF, un error chico en p deja un error grande en x.
+| 1 | 0.20 | 6 | 0.55338 | 0.553381 |
+| 2 | 0.45 | 15 | 1.75305 | 1.753050 |
+| 3 | 0.495 | 4 | 4.60409 | 4.604095 |
 
 ## Jenkins
 

@@ -6,7 +6,7 @@ pipeline {
         skipStagesAfterUnstable()
     }
 
-    // revisa GitLab cada 2 minutos por si hay cambios
+    // revisa GitHub cada 2 minutos por si hay cambios
     triggers {
         pollSCM('H/2 * * * *')
     }

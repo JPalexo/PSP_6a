@@ -18,7 +18,7 @@ public class Logic {
         int dof = valoresDOF[prueba - 1];
         double x = search.buscarX(p, dof);
 
-        String resultado = String.format("Test %d  p=%.3f  dof=%d  x=%.5f",
+        String resultado = String.format("Test %d  p=%.3f  dof=%d  x=%.6f",
                 prueba, p, dof, x);
 
         System.out.println(resultado);

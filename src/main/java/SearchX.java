@@ -6,7 +6,8 @@ public class SearchX {
 
         double x = 1.0;
         double d = 0.5;
-        double dblE = 0.00001;
+        // error mas chico que el 0.00001 del PDF: con ese el test 3 da 4.60156
+        double dblE = 0.0000001;
 
         double error = logic.integrar(x, dof) - p;
 
