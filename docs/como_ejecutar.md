@@ -2,6 +2,7 @@
 
 En la ruta `PSP\Program6`.
 
+
 ## Compilar
 
 ```bat
